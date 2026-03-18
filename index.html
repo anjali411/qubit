@@ -6,7 +6,7 @@
     <title>Qubit Quest | Learn Quantum Mechanics by Playing</title>
     <meta
       name="description"
-      content="An accessible, beginner-friendly, gamified introduction to quantum mechanics built around university-backed learning resources."
+      content="An accessible, beginner-friendly, interactive introduction to quantum mechanics with connected lessons, visuals, and intuition-building explanations."
     />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -25,21 +25,22 @@
         <p class="eyebrow">Quantum mechanics for complete beginners</p>
         <h1>Qubit Quest</h1>
         <p class="hero-copy">
-          Learn the strangest ideas in physics through missions, quick wins, and
-          research-backed explanations that assume nothing beyond high-school science.
+          Learn quantum mechanics through a connected journey. Each lesson is a
+          clickable stop on the map, each page builds on the last one, and each
+          concept comes with intuition, visuals, and a practical reason to care.
         </p>
         <div class="hero-actions">
-          <a class="button primary" href="#missions">Start mission 1</a>
-          <a class="button secondary" href="#references">See university sources</a>
+          <a class="button primary" href="#lesson-wave-particle">Start lesson 1</a>
+          <a class="button secondary" href="#pathways">See the learning path</a>
         </div>
       </div>
 
       <section class="hero-panel" aria-labelledby="hero-panel-title">
-        <h2 id="hero-panel-title">Your first quantum map</h2>
+        <h2 id="hero-panel-title">Your quantum roadmap</h2>
         <ul class="hero-list">
-          <li><strong>Level 1:</strong> Build intuition with stories and visuals.</li>
-          <li><strong>Level 2:</strong> Test your understanding with mini-challenges.</li>
-          <li><strong>Level 3:</strong> Connect ideas to real labs and technologies.</li>
+          <li><strong>Lesson 1:</strong> See why tiny objects refuse classical categories.</li>
+          <li><strong>Lesson 2:</strong> Build intuition for superposition and interference.</li>
+          <li><strong>Lesson 3:</strong> Understand measurement, uncertainty, and entanglement.</li>
         </ul>
         <div class="score-card" aria-live="polite">
           <span>Concept mastery</span>
@@ -52,97 +53,356 @@
       <section class="section intro-grid" aria-labelledby="why-quantum-title">
         <div>
           <p class="eyebrow">Why this subject matters</p>
-          <h2 id="why-quantum-title">Quantum mechanics explains how nature behaves at tiny scales.</h2>
+          <h2 id="why-quantum-title">Quantum mechanics explains the rules behind atoms, light, chemistry, and modern technology.</h2>
           <p>
-            At the scale of atoms, electrons, and light particles, the universe does not act like a tiny version of the everyday world. Quantum mechanics gives us the rules that govern atoms, chemical bonds, semiconductors, lasers, MRI scanners, and quantum computers.
+            Quantum theory matters because the world is not built from tiny billiard balls.
+            Electrons in atoms, photons in light, and the materials inside phones and
+            computers all behave according to quantum rules. To really understand the
+            subject, it helps to learn it in sequence: first what breaks in classical
+            thinking, then what replaces it, then how those new rules fit together.
           </p>
           <p>
-            This site turns those rules into approachable missions: first intuition, then vocabulary, then deeper cause-and-effect.
+            This site now works like a learning trail. Click into a lesson, learn one core
+            idea, and follow the next step when the intuition feels solid.
           </p>
         </div>
         <aside class="callout" aria-labelledby="approach-title">
           <h3 id="approach-title">How to use this site</h3>
           <ol>
-            <li>Read one mission at a time.</li>
-            <li>Use the “unlock concept” buttons after you feel confident.</li>
-            <li>Try the quiz and the probability lab.</li>
-            <li>Use the university references to keep learning.</li>
+            <li>Open the first lesson card below.</li>
+            <li>Use the visual and intuition boxes before reading the deeper explanation.</li>
+            <li>Unlock the concept when it clicks.</li>
+            <li>Follow the next lesson link so each page builds on the last.</li>
           </ol>
         </aside>
       </section>
 
-      <section class="section" id="missions" aria-labelledby="missions-title">
-        <p class="eyebrow">Game board</p>
-        <h2 id="missions-title">Five beginner missions</h2>
-        <div class="mission-grid">
-          <article class="card mission-card">
-            <div class="mission-badge">Mission 1</div>
-            <h3>Light and matter act like waves <em>and</em> particles</h3>
-            <p>
-              Classical physics tries to sort things into neat boxes. Quantum physics breaks that habit. Light can arrive in particle-like packets, while electrons can spread out like waves and create interference patterns.
-            </p>
-            <p>
-              Beginner takeaway: the “thing” you are studying may show different behaviors depending on the experiment.
-            </p>
-            <button class="unlock-btn" data-concept="Wave-particle duality">Unlock concept</button>
+      <section class="section" id="pathways" aria-labelledby="pathways-title">
+        <p class="eyebrow">Learning path</p>
+        <h2 id="pathways-title">Five linked lessons that build intuition step by step</h2>
+        <div class="mission-grid pathway-grid">
+          <article class="card mission-card pathway-card current">
+            <div class="mission-badge">Lesson 1</div>
+            <h3>Wave-particle duality</h3>
+            <p>Start with the first shock: light and matter cannot be sorted into one classical box.</p>
+            <a class="button lesson-link" href="#lesson-wave-particle">Open lesson</a>
           </article>
 
-          <article class="card mission-card">
-            <div class="mission-badge">Mission 2</div>
-            <h3>Superposition means “more than one possible state at once”</h3>
-            <p>
-              Before measurement, a quantum system is described by a combination of possibilities. That does not mean “anything goes”; it means the system has a structured set of probabilities that can interfere.
-            </p>
-            <p>
-              Beginner takeaway: quantum objects are not simply hiding a classical answer that we have not found yet.
-            </p>
-            <button class="unlock-btn" data-concept="Superposition">Unlock concept</button>
+          <article class="card mission-card pathway-card">
+            <div class="mission-badge">Lesson 2</div>
+            <h3>Superposition</h3>
+            <p>Once wave behavior makes sense, you can understand how a quantum state carries multiple possibilities.</p>
+            <a class="button lesson-link" href="#lesson-superposition">Open lesson</a>
           </article>
 
-          <article class="card mission-card">
-            <div class="mission-badge">Mission 3</div>
-            <h3>Measurement changes what can be predicted</h3>
-            <p>
-              In quantum mechanics, measurement is not just “looking.” The act of interacting with a system affects what information becomes definite. This is tied to the mathematics of observables and probabilities.
-            </p>
-            <p>
-              Beginner takeaway: a measurement setup is part of the physics, not an afterthought.
-            </p>
-            <button class="unlock-btn" data-concept="Measurement">Unlock concept</button>
+          <article class="card mission-card pathway-card">
+            <div class="mission-badge">Lesson 3</div>
+            <h3>Measurement</h3>
+            <p>Next, learn why an experiment is part of the physics and not just a passive observation.</p>
+            <a class="button lesson-link" href="#lesson-measurement">Open lesson</a>
           </article>
 
-          <article class="card mission-card">
-            <div class="mission-badge">Mission 4</div>
-            <h3>Uncertainty is a built-in feature, not a bad instrument</h3>
-            <p>
-              Some pairs of quantities, such as position and momentum, cannot both be pinned down with unlimited precision at the same time. This limit comes from the structure of quantum theory itself.
-            </p>
-            <p>
-              Beginner takeaway: uncertainty is a law of nature at small scales, not only a laboratory problem.
-            </p>
-            <button class="unlock-btn" data-concept="Uncertainty">Unlock concept</button>
+          <article class="card mission-card pathway-card">
+            <div class="mission-badge">Lesson 4</div>
+            <h3>Uncertainty</h3>
+            <p>Then connect wave-like states to the built-in tradeoffs of quantum prediction.</p>
+            <a class="button lesson-link" href="#lesson-uncertainty">Open lesson</a>
           </article>
 
-          <article class="card mission-card">
-            <div class="mission-badge">Mission 5</div>
-            <h3>Entanglement links systems in ways classical physics cannot</h3>
-            <p>
-              When particles become entangled, their combined state must be described as one quantum system. The correlations between measurements can be stronger than any classical shared strategy allows.
-            </p>
-            <p>
-              Beginner takeaway: quantum systems can store information in relationships, not just in individual parts.
-            </p>
-            <button class="unlock-btn" data-concept="Entanglement">Unlock concept</button>
+          <article class="card mission-card pathway-card">
+            <div class="mission-badge">Lesson 5</div>
+            <h3>Entanglement</h3>
+            <p>Finish by seeing how quantum systems can store information in relationships between parts.</p>
+            <a class="button lesson-link" href="#lesson-entanglement">Open lesson</a>
           </article>
         </div>
+      </section>
+
+      <section class="section lesson-shell" aria-labelledby="lesson-viewer-title">
+        <div class="lesson-shell-header">
+          <div>
+            <p class="eyebrow">Connected lesson pages</p>
+            <h2 id="lesson-viewer-title">Open one lesson at a time and follow the chain</h2>
+          </div>
+          <nav class="lesson-tabs" aria-label="Lesson navigation">
+            <a href="#lesson-wave-particle">1</a>
+            <a href="#lesson-superposition">2</a>
+            <a href="#lesson-measurement">3</a>
+            <a href="#lesson-uncertainty">4</a>
+            <a href="#lesson-entanglement">5</a>
+          </nav>
+        </div>
+
+        <article class="lesson-page card" id="lesson-wave-particle" data-lesson>
+          <div class="lesson-page-grid">
+            <div>
+              <p class="lesson-kicker">Lesson 1 of 5</p>
+              <h3>Wave-particle duality: why quantum physics starts by breaking your categories</h3>
+              <p>
+                In everyday life, an object usually fits one label. A baseball is a particle-like thing.
+                A water ripple is a wave-like thing. Quantum physics begins when those labels stop being
+                enough. Light can arrive in localized energy packets, yet it also creates interference
+                patterns. Electrons can hit a screen one at a time, but over many hits they build the same
+                striped pattern a wave would create.
+              </p>
+              <p>
+                That is the first intuition to keep: a quantum object is not switching costumes to confuse
+                you. Instead, the experiment decides which features become visible. The lesson is not
+                "everything is both in a simple way". The lesson is that classical categories are too narrow.
+              </p>
+            </div>
+            <aside class="visual-card">
+              <h4>Visual intuition</h4>
+              <div class="dual-visual" aria-hidden="true">
+                <div class="visual-orb orb-particle"></div>
+                <div class="visual-divider"></div>
+                <div class="visual-wave">
+                  <span></span><span></span><span></span>
+                </div>
+              </div>
+              <p>
+                Think of a quantum experiment like shining different flashlights on the same mystery object.
+                One setup highlights localization. Another highlights interference.
+              </p>
+            </aside>
+          </div>
+          <div class="intuition-grid">
+            <section class="mini-card">
+              <h4>Classical expectation</h4>
+              <p>A thing should have one behavior all the time, independent of how we examine it.</p>
+            </section>
+            <section class="mini-card">
+              <h4>Quantum upgrade</h4>
+              <p>The mathematical state supports several kinds of behavior, and the apparatus reveals different aspects of it.</p>
+            </section>
+            <section class="mini-card">
+              <h4>Why it matters</h4>
+              <p>This idea opens the door to interference, superposition, and probability amplitudes.</p>
+            </section>
+          </div>
+          <div class="lesson-actions">
+            <button class="unlock-btn" data-concept="Wave-particle duality">Unlock concept</button>
+            <a class="button secondary" href="#lesson-superposition">Next: superposition</a>
+          </div>
+        </article>
+
+        <article class="lesson-page card" id="lesson-superposition" data-lesson>
+          <div class="lesson-page-grid">
+            <div>
+              <p class="lesson-kicker">Lesson 2 of 5</p>
+              <h3>Superposition: one state, many possible outcomes</h3>
+              <p>
+                Once you accept that quantum systems are not tiny classical objects, superposition becomes
+                easier to understand. A quantum state can combine several allowed possibilities at once.
+                This does not mean the system is doing every imaginable thing. It means the state carries
+                amplitudes for specific outcomes, and those amplitudes can reinforce or cancel one another.
+              </p>
+              <p>
+                A good beginner picture is a musical chord. A chord is one sound made from several notes.
+                In the same spirit, a superposition is one quantum state built from several components.
+                Measurement does not reveal the whole chord at once; it gives one allowed note according to
+                the probabilities encoded in the state.
+              </p>
+            </div>
+            <aside class="visual-card">
+              <h4>Visual intuition</h4>
+              <div class="superposition-visual" aria-hidden="true">
+                <span class="state-pill">State A</span>
+                <span class="plus-sign">+</span>
+                <span class="state-pill alt">State B</span>
+                <span class="equals-sign">=</span>
+                <span class="state-pill result">One quantum state</span>
+              </div>
+              <p>
+                Superposition is not a messy blend of ignorance. It is a precise combination that can create interference.
+              </p>
+            </aside>
+          </div>
+          <div class="intuition-grid">
+            <section class="mini-card">
+              <h4>Build from lesson 1</h4>
+              <p>Wave behavior makes room for combinations and interference, which is why superposition makes sense.</p>
+            </section>
+            <section class="mini-card">
+              <h4>Common mistake</h4>
+              <p>It is not just "we do not know the answer yet" in a classical sense.</p>
+            </section>
+            <section class="mini-card">
+              <h4>Next step</h4>
+              <p>Now ask what happens when you actually perform a measurement.</p>
+            </section>
+          </div>
+          <div class="lesson-actions">
+            <button class="unlock-btn" data-concept="Superposition">Unlock concept</button>
+            <a class="button secondary" href="#lesson-measurement">Next: measurement</a>
+          </div>
+        </article>
+
+        <article class="lesson-page card" id="lesson-measurement" data-lesson>
+          <div class="lesson-page-grid">
+            <div>
+              <p class="lesson-kicker">Lesson 3 of 5</p>
+              <h3>Measurement: the question you ask shapes the answer you can get</h3>
+              <p>
+                In classical physics, measuring often feels passive. In quantum mechanics, the setup matters.
+                To measure position, spin, or energy, the system must interact with a device designed for that
+                question. That interaction determines which property becomes definite in the outcome.
+              </p>
+              <p>
+                A useful intuition is to imagine asking a multilingual friend a question in one language at a
+                time. The friend can answer many kinds of questions, but the form of the answer depends on how
+                you ask. A quantum system is richer and stranger than that analogy, yet the key point survives:
+                the measurement basis is part of the story.
+              </p>
+            </div>
+            <aside class="visual-card">
+              <h4>Visual intuition</h4>
+              <div class="measurement-visual" aria-hidden="true">
+                <div class="measure-box">State</div>
+                <div class="measure-arrow">→</div>
+                <div class="measure-box alt">Choose apparatus</div>
+                <div class="measure-arrow">→</div>
+                <div class="measure-box result">Outcome</div>
+              </div>
+              <p>
+                Measurement is not just opening your eyes. It is a physical interaction that selects a set of allowed outcomes.
+              </p>
+            </aside>
+          </div>
+          <div class="intuition-grid">
+            <section class="mini-card">
+              <h4>Big idea</h4>
+              <p>The experiment belongs inside the physics, not outside it.</p>
+            </section>
+            <section class="mini-card">
+              <h4>What becomes definite</h4>
+              <p>A specific outcome from the observable you chose to measure.</p>
+            </section>
+            <section class="mini-card">
+              <h4>Bridge forward</h4>
+              <p>Because different observables are linked differently to the state, tradeoffs like uncertainty appear.</p>
+            </section>
+          </div>
+          <div class="lesson-actions">
+            <button class="unlock-btn" data-concept="Measurement">Unlock concept</button>
+            <a class="button secondary" href="#lesson-uncertainty">Next: uncertainty</a>
+          </div>
+        </article>
+
+        <article class="lesson-page card" id="lesson-uncertainty" data-lesson>
+          <div class="lesson-page-grid">
+            <div>
+              <p class="lesson-kicker">Lesson 4 of 5</p>
+              <h3>Uncertainty: not bad tools, but a built-in feature of quantum states</h3>
+              <p>
+                The uncertainty principle says that some pairs of quantities, like position and momentum,
+                cannot both be made arbitrarily sharp in the same state. This is not because scientists are
+                clumsy. It is because a state that is very localized in one sense must be spread out in the
+                complementary sense.
+              </p>
+              <p>
+                This idea becomes more intuitive if you think back to waves. A short pulse is localized in
+                space, but it needs many wavelengths mixed together. A clean single wavelength extends over a
+                large region. Quantum states inherit a similar tradeoff, which is why uncertainty grows out of
+                the structure of the theory itself.
+              </p>
+            </div>
+            <aside class="visual-card">
+              <h4>Visual intuition</h4>
+              <div class="uncertainty-visual" aria-hidden="true">
+                <div class="uncertainty-axis tight">
+                  <span>Position: sharp</span>
+                </div>
+                <div class="uncertainty-axis wide">
+                  <span>Momentum: spread out</span>
+                </div>
+              </div>
+              <p>
+                Sharpening one description usually broadens the other. The tradeoff comes from the state itself.
+              </p>
+            </aside>
+          </div>
+          <div class="intuition-grid">
+            <section class="mini-card">
+              <h4>Not the right story</h4>
+              <p>"We would know both perfectly if our machines were better."</p>
+            </section>
+            <section class="mini-card">
+              <h4>Better story</h4>
+              <p>The same state cannot deliver unlimited sharpness for certain paired observables.</p>
+            </section>
+            <section class="mini-card">
+              <h4>Bridge forward</h4>
+              <p>Once single systems are strange enough, paired systems can become stranger still through entanglement.</p>
+            </section>
+          </div>
+          <div class="lesson-actions">
+            <button class="unlock-btn" data-concept="Uncertainty">Unlock concept</button>
+            <a class="button secondary" href="#lesson-entanglement">Next: entanglement</a>
+          </div>
+        </article>
+
+        <article class="lesson-page card" id="lesson-entanglement" data-lesson>
+          <div class="lesson-page-grid">
+            <div>
+              <p class="lesson-kicker">Lesson 5 of 5</p>
+              <h3>Entanglement: the whole system contains information that the parts do not</h3>
+              <p>
+                Entanglement appears when two or more quantum systems must be described together rather than
+                independently. In a classical picture, each part could carry its own private instructions.
+                In an entangled state, the most important information can live in the correlation between parts.
+              </p>
+              <p>
+                This is why entanglement matters so much in quantum computing and communication. It is not magic
+                faster-than-light messaging. It is a new kind of structure in the joint state of a system, and
+                it produces correlations that classical shared strategies cannot fully imitate.
+              </p>
+            </div>
+            <aside class="visual-card">
+              <h4>Visual intuition</h4>
+              <div class="entanglement-visual" aria-hidden="true">
+                <div class="ent-node">A</div>
+                <div class="ent-link"></div>
+                <div class="ent-node">B</div>
+              </div>
+              <p>
+                The key information is in the link, not just inside node A or node B by themselves.
+              </p>
+            </aside>
+          </div>
+          <div class="intuition-grid">
+            <section class="mini-card">
+              <h4>What changes</h4>
+              <p>You stop describing each particle alone and start describing one combined state.</p>
+            </section>
+            <section class="mini-card">
+              <h4>Why it feels strange</h4>
+              <p>Classical intuition expects properties to belong to objects individually, not to their relationship.</p>
+            </section>
+            <section class="mini-card">
+              <h4>Where to go next</h4>
+              <p>After this, the natural next layer is amplitudes, operators, and the Schrödinger equation.</p>
+            </section>
+          </div>
+          <div class="lesson-actions">
+            <button class="unlock-btn" data-concept="Entanglement">Unlock concept</button>
+            <a class="button secondary" href="#deep-dive-title">Continue to deeper ideas</a>
+          </div>
+        </article>
       </section>
 
       <section class="section lab-section" aria-labelledby="lab-title">
         <div>
           <p class="eyebrow">Interactive lab</p>
-          <h2 id="lab-title">Probability lab: what does a wave function tell you?</h2>
+          <h2 id="lab-title">Probability lab: connect the shape of a state to what you are likely to measure</h2>
           <p>
-            A wave function is not a little water wave. For beginners, the key idea is that it encodes the probability pattern for different measurement outcomes. Move the slider to change how concentrated the probability is.
+            The wave function is not a little material wave sloshing around in space. For a beginner, the useful
+            mental model is this: the state encodes a pattern of possibilities, and the square of the amplitude
+            tells you how strongly each outcome is weighted. Use the slider to make the state narrow or wide.
+          </p>
+          <p>
+            Then connect that to uncertainty: a tightly concentrated state gives a narrow cluster of likely
+            position outcomes, while a broader state spreads that probability out.
           </p>
           <label for="spread">State spread</label>
           <input id="spread" type="range" min="10" max="90" value="45" />
@@ -155,42 +415,56 @@
 
       <section class="section" aria-labelledby="deep-dive-title">
         <p class="eyebrow">Deeper learning</p>
-        <h2 id="deep-dive-title">The ideas, with enough depth to be meaningful</h2>
+        <h2 id="deep-dive-title">The next layer of concepts, once the intuition is in place</h2>
         <div class="topic-grid">
           <article class="card topic-card">
             <h3>Wave functions and amplitudes</h3>
             <p>
-              The mathematical state of a system is often represented by a wave function or state vector. Its amplitudes are not directly observable. Instead, their squared magnitudes determine probabilities. This is why quantum theory predicts statistics with extraordinary precision.
+              A wave function gives a compact mathematical description of the state. The amplitudes themselves
+              are not directly observed. Instead, their squared magnitudes generate probabilities. This is one
+              of the major conceptual jumps in quantum theory: the basic mathematical object is not a list of
+              certainties but a structure for predicting statistics with extraordinary accuracy.
             </p>
           </article>
           <article class="card topic-card">
             <h3>Operators and observables</h3>
             <p>
-              Quantities like energy, momentum, and spin are represented by operators. A measurement outcome corresponds to one of the operator's allowed values, and the state determines the probability of each one.
+              Quantities like energy, momentum, and spin are represented by operators. Each operator comes with
+              a set of allowed outcomes, and the current state determines the probability for each one. This is
+              the formal version of the lesson on measurement: different questions correspond to different kinds
+              of mathematical action on the same state.
             </p>
           </article>
           <article class="card topic-card">
             <h3>Time evolution</h3>
             <p>
-              Between measurements, the state evolves smoothly according to the Schrödinger equation. This evolution is deterministic. The probabilistic part enters when predicting measurement results.
+              Between measurements, the state evolves smoothly according to the Schrödinger equation. This part
+              is deterministic. In other words, the state follows a precise rule through time. Probability enters
+              when we ask what result a measurement will return.
             </p>
           </article>
           <article class="card topic-card">
             <h3>Tunneling</h3>
             <p>
-              Quantum particles can be detected in regions that classical physics would forbid because wave functions can extend through barriers. Tunneling helps explain fusion in stars, scanning tunneling microscopes, and some semiconductor devices.
+              A quantum state can extend into a region that would be forbidden classically, which means a particle
+              can sometimes be detected across a barrier. Tunneling helps explain fusion in stars, scanning
+              tunneling microscopes, and some semiconductor behavior.
             </p>
           </article>
           <article class="card topic-card">
             <h3>Spin</h3>
             <p>
-              Spin is an intrinsic quantum property that behaves partly like angular momentum but is not literally a tiny ball spinning in space. Spin measurements are central to many experiments and quantum information systems.
+              Spin is an intrinsic quantum property with no perfect classical analogy. It behaves mathematically
+              like angular momentum in important ways, but it is not literally a tiny sphere spinning in space.
+              Spin measurements are central in both fundamental experiments and quantum information science.
             </p>
           </article>
           <article class="card topic-card">
-            <h3>Why quantum feels strange</h3>
+            <h3>Decoherence</h3>
             <p>
-              Our intuition evolved for slow, large objects. Quantum theory asks us to use a different toolkit: probabilities from amplitudes, incompatible measurements, and systems described by states rather than everyday trajectories.
+              Quantum effects are delicate. When a system interacts strongly with its environment, interference
+              patterns can become scrambled and classical-looking behavior emerges. Decoherence helps explain why
+              large everyday objects do not usually display obvious superpositions.
             </p>
           </article>
         </div>
@@ -233,10 +507,10 @@
         <p class="eyebrow">Why people care</p>
         <h2 id="applications-title">Modern technologies built on quantum ideas</h2>
         <div class="applications-grid">
-          <article class="card"><h3>Semiconductors</h3><p>Band structure and electron behavior in solids make modern electronics possible.</p></article>
-          <article class="card"><h3>Lasers</h3><p>Stimulated emission and quantized energy levels power communication, medicine, and manufacturing.</p></article>
-          <article class="card"><h3>MRI and atomic clocks</h3><p>Quantum states and resonance support precise imaging and timekeeping.</p></article>
-          <article class="card"><h3>Quantum computing</h3><p>Superposition and entanglement are used to process some kinds of information in new ways.</p></article>
+          <article class="card"><h3>Semiconductors</h3><p>Band structure and electron behavior in solids make modern electronics possible, from processors to solar cells.</p></article>
+          <article class="card"><h3>Lasers</h3><p>Stimulated emission and quantized energy levels power communication networks, precision tools, and medical devices.</p></article>
+          <article class="card"><h3>MRI and atomic clocks</h3><p>Quantum states, resonance, and transitions enable precise imaging and extraordinarily accurate timekeeping.</p></article>
+          <article class="card"><h3>Quantum computing</h3><p>Superposition and entanglement are used to represent and manipulate some kinds of information in new ways.</p></article>
         </div>
       </section>
 
@@ -244,20 +518,21 @@
         <p class="eyebrow">Plain-language glossary</p>
         <h2 id="glossary-title">Terms that often confuse beginners</h2>
         <div class="glossary-grid">
-          <article class="card"><h3>Quantum state</h3><p>The full mathematical description used to predict measurement outcomes.</p></article>
-          <article class="card"><h3>Observable</h3><p>A measurable quantity such as energy, position, or spin.</p></article>
-          <article class="card"><h3>Amplitude</h3><p>A number used in the quantum description whose squared magnitude helps determine probability.</p></article>
-          <article class="card"><h3>Interference</h3><p>When different amplitudes combine and change the likelihood of outcomes.</p></article>
+          <article class="card"><h3>Quantum state</h3><p>The full mathematical description used to predict measurement outcomes and how probabilities are distributed.</p></article>
+          <article class="card"><h3>Observable</h3><p>A measurable quantity such as energy, position, momentum, or spin.</p></article>
+          <article class="card"><h3>Amplitude</h3><p>A quantity in the quantum description whose squared magnitude contributes to probability.</p></article>
+          <article class="card"><h3>Interference</h3><p>When amplitudes combine in ways that increase or decrease the likelihood of outcomes.</p></article>
           <article class="card"><h3>Eigenvalue</h3><p>An allowed result of measuring a particular observable.</p></article>
-          <article class="card"><h3>Decoherence</h3><p>The loss of delicate quantum behavior when a system strongly interacts with its environment.</p></article>
+          <article class="card"><h3>Decoherence</h3><p>The loss of fragile quantum behavior when a system strongly interacts with its surroundings.</p></article>
         </div>
       </section>
 
       <section class="section references-section" id="references" aria-labelledby="references-title">
         <p class="eyebrow">Keep exploring</p>
-        <h2 id="references-title">University and research-backed learning path</h2>
+        <h2 id="references-title">University and research-backed next steps</h2>
         <p>
-          These resources informed the learning structure of this page and give you an authoritative next step once the beginner missions feel comfortable.
+          These resources informed the structure of this learning path and offer a stronger bridge from intuition
+          to formal study.
         </p>
         <div class="reference-list">
           <article class="card">
