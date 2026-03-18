@@ -5,8 +5,12 @@ const spreadInput = document.getElementById('spread');
 const spreadDescription = document.getElementById('spread-description');
 const quizForm = document.getElementById('quiz-form');
 const quizResult = document.getElementById('quiz-result');
+const lessonPages = document.querySelectorAll('[data-lesson]');
+const lessonTabs = document.querySelectorAll('.lesson-tabs a');
+const lessonLinks = document.querySelectorAll('a[href^="#lesson-"]');
 
 const unlockedConcepts = new Set();
+const defaultLessonId = 'lesson-wave-particle';
 
 function updateMastery() {
   masteryScore.textContent = `${unlockedConcepts.size} / 5 concepts unlocked`;
@@ -49,6 +53,21 @@ function renderDistribution(spreadValue) {
   }
 }
 
+function showLessonFromHash() {
+  const hash = window.location.hash.replace('#', '');
+  const activeLessonId = hash.startsWith('lesson-') ? hash : defaultLessonId;
+
+  lessonPages.forEach((page) => {
+    page.classList.toggle('active', page.id === activeLessonId);
+  });
+
+  lessonTabs.forEach((tab) => {
+    const isActive = tab.getAttribute('href') === `#${activeLessonId}`;
+    tab.classList.toggle('active-tab', isActive);
+    tab.setAttribute('aria-current', isActive ? 'page' : 'false');
+  });
+}
+
 spreadInput.addEventListener('input', (event) => {
   renderDistribution(Number(event.target.value));
 });
@@ -66,11 +85,20 @@ quizForm.addEventListener('submit', (event) => {
   if (score === 3) {
     quizResult.textContent = 'Perfect score. You are ready for the next layer of math and experiments.';
   } else if (score === 2) {
-    quizResult.textContent = 'Nice work. Review the mission cards once more and you will be in great shape.';
+    quizResult.textContent = 'Nice work. Review the lesson pages once more and you will be in great shape.';
   } else {
-    quizResult.textContent = 'Good start. Quantum ideas take repetition—try the missions again and resubmit.';
+    quizResult.textContent = 'Good start. Quantum ideas take repetition—reopen the lesson chain and try again.';
   }
 });
 
+lessonLinks.forEach((link) => {
+  link.addEventListener('click', () => {
+    requestAnimationFrame(showLessonFromHash);
+  });
+});
+
+window.addEventListener('hashchange', showLessonFromHash);
+
 renderDistribution(Number(spreadInput.value));
 updateMastery();
+showLessonFromHash();
