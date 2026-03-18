@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Qubit Quest | Learn Quantum Mechanics by Playing</title>
+    <meta
+      name="description"
+      content="An accessible, beginner-friendly, gamified introduction to quantum mechanics built around university-backed learning resources."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <script defer src="script.js"></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main-content">Skip to content</a>
+
+    <header class="site-header">
+      <div class="brand-block">
+        <p class="eyebrow">Quantum mechanics for complete beginners</p>
+        <h1>Qubit Quest</h1>
+        <p class="hero-copy">
+          Learn the strangest ideas in physics through missions, quick wins, and
+          research-backed explanations that assume nothing beyond high-school science.
+        </p>
+        <div class="hero-actions">
+          <a class="button primary" href="#missions">Start mission 1</a>
+          <a class="button secondary" href="#references">See university sources</a>
+        </div>
+      </div>
+
+      <section class="hero-panel" aria-labelledby="hero-panel-title">
+        <h2 id="hero-panel-title">Your first quantum map</h2>
+        <ul class="hero-list">
+          <li><strong>Level 1:</strong> Build intuition with stories and visuals.</li>
+          <li><strong>Level 2:</strong> Test your understanding with mini-challenges.</li>
+          <li><strong>Level 3:</strong> Connect ideas to real labs and technologies.</li>
+        </ul>
+        <div class="score-card" aria-live="polite">
+          <span>Concept mastery</span>
+          <strong id="mastery-score">0 / 5 concepts unlocked</strong>
+        </div>
+      </section>
+    </header>
+
+    <main id="main-content">
+      <section class="section intro-grid" aria-labelledby="why-quantum-title">
+        <div>
+          <p class="eyebrow">Why this subject matters</p>
+          <h2 id="why-quantum-title">Quantum mechanics explains how nature behaves at tiny scales.</h2>
+          <p>
+            At the scale of atoms, electrons, and light particles, the universe does not act like a tiny version of the everyday world. Quantum mechanics gives us the rules that govern atoms, chemical bonds, semiconductors, lasers, MRI scanners, and quantum computers.
+          </p>
+          <p>
+            This site turns those rules into approachable missions: first intuition, then vocabulary, then deeper cause-and-effect.
+          </p>
+        </div>
+        <aside class="callout" aria-labelledby="approach-title">
+          <h3 id="approach-title">How to use this site</h3>
+          <ol>
+            <li>Read one mission at a time.</li>
+            <li>Use the “unlock concept” buttons after you feel confident.</li>
+            <li>Try the quiz and the probability lab.</li>
+            <li>Use the university references to keep learning.</li>
+          </ol>
+        </aside>
+      </section>
+
+      <section class="section" id="missions" aria-labelledby="missions-title">
+        <p class="eyebrow">Game board</p>
+        <h2 id="missions-title">Five beginner missions</h2>
+        <div class="mission-grid">
+          <article class="card mission-card">
+            <div class="mission-badge">Mission 1</div>
+            <h3>Light and matter act like waves <em>and</em> particles</h3>
+            <p>
+              Classical physics tries to sort things into neat boxes. Quantum physics breaks that habit. Light can arrive in particle-like packets, while electrons can spread out like waves and create interference patterns.
+            </p>
+            <p>
+              Beginner takeaway: the “thing” you are studying may show different behaviors depending on the experiment.
+            </p>
+            <button class="unlock-btn" data-concept="Wave-particle duality">Unlock concept</button>
+          </article>
+
+          <article class="card mission-card">
+            <div class="mission-badge">Mission 2</div>
+            <h3>Superposition means “more than one possible state at once”</h3>
+            <p>
+              Before measurement, a quantum system is described by a combination of possibilities. That does not mean “anything goes”; it means the system has a structured set of probabilities that can interfere.
+            </p>
+            <p>
+              Beginner takeaway: quantum objects are not simply hiding a classical answer that we have not found yet.
+            </p>
+            <button class="unlock-btn" data-concept="Superposition">Unlock concept</button>
+          </article>
+
+          <article class="card mission-card">
+            <div class="mission-badge">Mission 3</div>
+            <h3>Measurement changes what can be predicted</h3>
+            <p>
+              In quantum mechanics, measurement is not just “looking.” The act of interacting with a system affects what information becomes definite. This is tied to the mathematics of observables and probabilities.
+            </p>
+            <p>
+              Beginner takeaway: a measurement setup is part of the physics, not an afterthought.
+            </p>
+            <button class="unlock-btn" data-concept="Measurement">Unlock concept</button>
+          </article>
+
+          <article class="card mission-card">
+            <div class="mission-badge">Mission 4</div>
+            <h3>Uncertainty is a built-in feature, not a bad instrument</h3>
+            <p>
+              Some pairs of quantities, such as position and momentum, cannot both be pinned down with unlimited precision at the same time. This limit comes from the structure of quantum theory itself.
+            </p>
+            <p>
+              Beginner takeaway: uncertainty is a law of nature at small scales, not only a laboratory problem.
+            </p>
+            <button class="unlock-btn" data-concept="Uncertainty">Unlock concept</button>
+          </article>
+
+          <article class="card mission-card">
+            <div class="mission-badge">Mission 5</div>
+            <h3>Entanglement links systems in ways classical physics cannot</h3>
+            <p>
+              When particles become entangled, their combined state must be described as one quantum system. The correlations between measurements can be stronger than any classical shared strategy allows.
+            </p>
+            <p>
+              Beginner takeaway: quantum systems can store information in relationships, not just in individual parts.
+            </p>
+            <button class="unlock-btn" data-concept="Entanglement">Unlock concept</button>
+          </article>
+        </div>
+      </section>
+
+      <section class="section lab-section" aria-labelledby="lab-title">
+        <div>
+          <p class="eyebrow">Interactive lab</p>
+          <h2 id="lab-title">Probability lab: what does a wave function tell you?</h2>
+          <p>
+            A wave function is not a little water wave. For beginners, the key idea is that it encodes the probability pattern for different measurement outcomes. Move the slider to change how concentrated the probability is.
+          </p>
+          <label for="spread">State spread</label>
+          <input id="spread" type="range" min="10" max="90" value="45" />
+          <p id="spread-description">Medium spread: outcomes cluster around the center but still vary.</p>
+        </div>
+        <div class="distribution-card card" aria-live="polite">
+          <div class="bars" id="bars"></div>
+        </div>
+      </section>
+
+      <section class="section" aria-labelledby="deep-dive-title">
+        <p class="eyebrow">Deeper learning</p>
+        <h2 id="deep-dive-title">The ideas, with enough depth to be meaningful</h2>
+        <div class="topic-grid">
+          <article class="card topic-card">
+            <h3>Wave functions and amplitudes</h3>
+            <p>
+              The mathematical state of a system is often represented by a wave function or state vector. Its amplitudes are not directly observable. Instead, their squared magnitudes determine probabilities. This is why quantum theory predicts statistics with extraordinary precision.
+            </p>
+          </article>
+          <article class="card topic-card">
+            <h3>Operators and observables</h3>
+            <p>
+              Quantities like energy, momentum, and spin are represented by operators. A measurement outcome corresponds to one of the operator's allowed values, and the state determines the probability of each one.
+            </p>
+          </article>
+          <article class="card topic-card">
+            <h3>Time evolution</h3>
+            <p>
+              Between measurements, the state evolves smoothly according to the Schrödinger equation. This evolution is deterministic. The probabilistic part enters when predicting measurement results.
+            </p>
+          </article>
+          <article class="card topic-card">
+            <h3>Tunneling</h3>
+            <p>
+              Quantum particles can be detected in regions that classical physics would forbid because wave functions can extend through barriers. Tunneling helps explain fusion in stars, scanning tunneling microscopes, and some semiconductor devices.
+            </p>
+          </article>
+          <article class="card topic-card">
+            <h3>Spin</h3>
+            <p>
+              Spin is an intrinsic quantum property that behaves partly like angular momentum but is not literally a tiny ball spinning in space. Spin measurements are central to many experiments and quantum information systems.
+            </p>
+          </article>
+          <article class="card topic-card">
+            <h3>Why quantum feels strange</h3>
+            <p>
+              Our intuition evolved for slow, large objects. Quantum theory asks us to use a different toolkit: probabilities from amplitudes, incompatible measurements, and systems described by states rather than everyday trajectories.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section quiz-section" aria-labelledby="quiz-title">
+        <div>
+          <p class="eyebrow">Boss battle</p>
+          <h2 id="quiz-title">Quick quantum check</h2>
+          <p>Choose the best answer for each question. No penalty for trying.</p>
+        </div>
+        <form id="quiz-form" class="quiz-form">
+          <fieldset class="card">
+            <legend>1. What does superposition mean in a beginner-friendly sense?</legend>
+            <label><input type="radio" name="q1" value="a" /> A particle is secretly classical and we just do not know the answer.</label>
+            <label><input type="radio" name="q1" value="b" /> A system can be described by multiple possible outcomes with specific amplitudes before measurement.</label>
+            <label><input type="radio" name="q1" value="c" /> Matter disappears until someone looks.</label>
+          </fieldset>
+
+          <fieldset class="card">
+            <legend>2. The uncertainty principle is mainly about...</legend>
+            <label><input type="radio" name="q2" value="a" /> broken measuring devices.</label>
+            <label><input type="radio" name="q2" value="b" /> a fundamental limit built into quantum theory for certain pairs of quantities.</label>
+            <label><input type="radio" name="q2" value="c" /> scientists refusing to share data.</label>
+          </fieldset>
+
+          <fieldset class="card">
+            <legend>3. Entanglement is important because...</legend>
+            <label><input type="radio" name="q3" value="a" /> it creates correlations that belong to the whole system, not just each part separately.</label>
+            <label><input type="radio" name="q3" value="b" /> it proves physics is random in every possible sense.</label>
+            <label><input type="radio" name="q3" value="c" /> it allows faster-than-light messaging.</label>
+          </fieldset>
+
+          <button class="button primary" type="submit">Score my quiz</button>
+          <p id="quiz-result" class="quiz-result" aria-live="polite"></p>
+        </form>
+      </section>
+
+      <section class="section" aria-labelledby="applications-title">
+        <p class="eyebrow">Why people care</p>
+        <h2 id="applications-title">Modern technologies built on quantum ideas</h2>
+        <div class="applications-grid">
+          <article class="card"><h3>Semiconductors</h3><p>Band structure and electron behavior in solids make modern electronics possible.</p></article>
+          <article class="card"><h3>Lasers</h3><p>Stimulated emission and quantized energy levels power communication, medicine, and manufacturing.</p></article>
+          <article class="card"><h3>MRI and atomic clocks</h3><p>Quantum states and resonance support precise imaging and timekeeping.</p></article>
+          <article class="card"><h3>Quantum computing</h3><p>Superposition and entanglement are used to process some kinds of information in new ways.</p></article>
+        </div>
+      </section>
+
+      <section class="section" aria-labelledby="glossary-title">
+        <p class="eyebrow">Plain-language glossary</p>
+        <h2 id="glossary-title">Terms that often confuse beginners</h2>
+        <div class="glossary-grid">
+          <article class="card"><h3>Quantum state</h3><p>The full mathematical description used to predict measurement outcomes.</p></article>
+          <article class="card"><h3>Observable</h3><p>A measurable quantity such as energy, position, or spin.</p></article>
+          <article class="card"><h3>Amplitude</h3><p>A number used in the quantum description whose squared magnitude helps determine probability.</p></article>
+          <article class="card"><h3>Interference</h3><p>When different amplitudes combine and change the likelihood of outcomes.</p></article>
+          <article class="card"><h3>Eigenvalue</h3><p>An allowed result of measuring a particular observable.</p></article>
+          <article class="card"><h3>Decoherence</h3><p>The loss of delicate quantum behavior when a system strongly interacts with its environment.</p></article>
+        </div>
+      </section>
+
+      <section class="section references-section" id="references" aria-labelledby="references-title">
+        <p class="eyebrow">Keep exploring</p>
+        <h2 id="references-title">University and research-backed learning path</h2>
+        <p>
+          These resources informed the learning structure of this page and give you an authoritative next step once the beginner missions feel comfortable.
+        </p>
+        <div class="reference-list">
+          <article class="card">
+            <h3>MIT OpenCourseWare</h3>
+            <p>8.04 Quantum Physics I and related MIT materials for foundational topics such as superposition, uncertainty, and wave mechanics.</p>
+            <a href="https://ocw.mit.edu/courses/8-04-quantum-physics-i-spring-2016/" target="_blank" rel="noreferrer">Visit MIT OCW</a>
+          </article>
+          <article class="card">
+            <h3>MIT Open Learning Library</h3>
+            <p>Structured, self-paced introductory material that helps bridge intuitive explanations and formal reasoning.</p>
+            <a href="https://openlearninglibrary.mit.edu/" target="_blank" rel="noreferrer">Visit MIT Open Learning Library</a>
+          </article>
+          <article class="card">
+            <h3>University of Colorado Boulder PhET</h3>
+            <p>Interactive simulations for wave interference and quantum phenomena that are especially useful for visual learners.</p>
+            <a href="https://phet.colorado.edu/" target="_blank" rel="noreferrer">Visit PhET</a>
+          </article>
+          <article class="card">
+            <h3>Stanford Encyclopedia of Philosophy</h3>
+            <p>A rigorous but readable reference for interpretation questions such as measurement and the meaning of quantum theory.</p>
+            <a href="https://plato.stanford.edu/entries/qm/" target="_blank" rel="noreferrer">Visit SEP</a>
+          </article>
+          <article class="card">
+            <h3>Caltech and other research universities</h3>
+            <p>Look for undergraduate lecture notes and public outreach articles on tunneling, spin, and quantum information once you are ready for more mathematics.</p>
+            <a href="https://www.caltech.edu/" target="_blank" rel="noreferrer">Visit Caltech</a>
+          </article>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
